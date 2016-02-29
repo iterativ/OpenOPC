@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
+from OpenOPC import __version__ as version
 
 setup(name="OpenOPC",
-  version='1.2.0',
+  version=version,
   download_url='https://github.com/iterativ/OpenOPC/tarball/master',
   description="This is a clone of http://openopc.sourceforge.net modified to be used with distutils",
   keywords='python, opc, openopc',
@@ -10,3 +11,4 @@ setup(name="OpenOPC",
   packages = find_packages(exclude=['ez_setup']),
   zip_safe = False,
   )
+
