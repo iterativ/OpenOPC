@@ -5,7 +5,7 @@
 # A cross-platform OPC-DA client built using the OpenOPC for Python
 # library module.
 #
-# Copyright (c) 2007-2012 Barry Barnreiter (barry_b@users.sourceforge.net)
+# Copyright (c) 2007-2015 Barry Barnreiter (barrybb@gmail.com)
 #
 ###########################################################################
 
@@ -76,7 +76,7 @@ if environ.has_key('OPC_TIMEOUT'):      timeout = int(environ['OPC_TIMEOUT'])
 
 def usage():
    print 'OpenOPC Command Line Client', OpenOPC.__version__
-   print 'Copyright (c) 2007-2012 Barry Barnreiter (barry_b@users.sourceforge.net)'
+   print 'Copyright (c) 2007-2015 Barry Barnreiter (barrybb@gmail.com)'
    print ''
    print 'Usage:  opc [OPTIONS] [ACTION] [ITEM|PATH...]'
    print ''
@@ -383,6 +383,8 @@ else:
    if action == 'write':
       if len(tags) % 2 == 0:
          tag_value_pairs = [(tags[i], tags[i+1]) for i in range(0, len(tags), 2)]
+      elif len([t for t in tags if t.find('=') != -1]) == len(tags):
+         tag_value_pairs = [t.split('=') for t in tags]
       else:
          print 'Write arguments must be supplied in ITEM=VALUE or ITEM VALUE format'
          exit()
