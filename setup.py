@@ -1,13 +1,12 @@
 from setuptools import setup, find_packages
-from OpenOPC import __version__ as version
 
 setup(name="OpenOPC",
-      version=version,
+      version='1.3.2',
       download_url='https://github.com/iterativ/OpenOPC/tarball/master',
       description="This is a clone of http://openopc.sourceforge.net modified to be used with distutils",
       keywords='python, opc, openopc',
       url='http://openopc.sourceforge.net',
       license='GPLv2',
-      packages=find_packages(exclude=['ez_setup']),
+      packages=['OpenOPC'],
       zip_safe=False,
       )

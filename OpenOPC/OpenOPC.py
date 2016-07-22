@@ -15,8 +15,6 @@ import socket
 import re
 import Queue
 
-__version__ = '1.3.1'
-
 current_client = None
 
 # Win32 only modules not needed for 'open' protocol mode
@@ -854,7 +852,7 @@ class client():
         """Write list of (tag, value) pair(s) to the server"""
 
         if type(tag_value_pairs) in (types.ListType, types.TupleType) and type(tag_value_pairs[0]) in (
-        types.ListType, types.TupleType):
+                types.ListType, types.TupleType):
             single = False
         else:
             single = True
@@ -1007,7 +1005,7 @@ class client():
         """Return list of property tuples (id, name, value) for the specified tag(s) """
 
         if type(tags) not in (types.ListType, types.TupleType) and type(id) not in (
-        types.NoneType, types.ListType, types.TupleType):
+                types.NoneType, types.ListType, types.TupleType):
             single = True
         else:
             single = False
@@ -1158,7 +1156,7 @@ class client():
             info_list += [('OPC Server', self._opc.ServerName)]
             info_list += [('State', OPC_STATUS[self._opc.ServerState])]
             info_list += [('Version', '%d.%d (Build %d)' % (
-            self._opc.MajorVersion, self._opc.MinorVersion, self._opc.BuildNumber))]
+                self._opc.MajorVersion, self._opc.MinorVersion, self._opc.BuildNumber))]
 
             try:
                 browser = self._opc.CreateBrowser()
