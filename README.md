@@ -45,8 +45,8 @@ OpenOPC is also one of the very few OPC-DA toolkits available for any dynamic la
 This project utilizes the de facto OPC-DA (Win32 COM-based) industrial automation standard. If you are looking for an OPC XML-DA library for Python, then please visit the PyOPC project.
 
 
-OpenOPC Gateway Service
----------------------------------
+## OpenOPC Gateway Service
+
 The Gateway Service is an optional Windows service which handles all the Win32 COM/DCOM calls used by the OpenOPC library module. This offers the following potential advantages:
 
 Avoidance of DCOM security headaches and firewall issues when running the OPC client and OPC server on different nodes.
@@ -73,8 +73,7 @@ Reference:
 http://sourceforge.net/p/openopc/discussion/709251/thread/b0216f58/
 
 
-OpenOPC Library Tutorial
--------------------------------
+## OpenOPC Library Tutorial
 
 The best way to learn the OpenOPC library is by trying it interactively from the Python Shell. The following examples use the Matrikon OPC Simulation Server which you can download for free from the company's website. We recommended you use a simulation server such as this one while learning OpenOPC as opposed to testing using a "live" OPC server.
 
@@ -296,8 +295,7 @@ Remove all named groups which were created with the read function...
     
     
     
-OpenOPC Command-line Client
------------------------------------------------------
+## OpenOPC Command-line Client
 
 To the best of our knowledge, the OpenOPC project includes the only publically available command-line based OPC client. Unlike graphical OPC clients, this client can be easily used in scripts or batch files. And because of its piping capability (i.e. chaining commands together), it is far more powerful than other OPC clients.
 
