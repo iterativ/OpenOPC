@@ -1,32 +1,40 @@
-OpenOPC
-=======
+# OpenOPC
+
 
 This is a clone of http://openopc.sourceforge.net, with modifications to make it use distutils
 
 
 
-About OpenOPC
--------------------
+## About OpenOPC
+
 OpenOPC for Python is a free, open source OPC (OLE for Process Control) toolkit designed for use with the popular Python programming language. The unique features that set it apart from the many commercially available OPC toolkits include...
 
-Easy to use
-------------------
+## Easy to use
+
 Because the OpenOPC library implements a minimal number of Python functions which may be chained together in a variety of ways, the library is simple to learn and easy to remember. In its simplest form, you can read and write OPC items as easily as any variable in your Python program...
-print opc['Square Waves.Int4']
-opc['Square Waves.Real8'] = 100.0
-Cross platform support
+
+    print opc['Square Waves.Int4']
+    opc['Square Waves.Real8'] = 100.0
+
+### Cross platform support
 
 OpenOPC works with both Windows and non-Windows platforms. It has been tested with Windows, Linux, and Mac OS X.
-Functional programming style
+
+
+### Functional programming style
 
 OpenOPC allows OPC calls to be chained together in an elegant, functional programming style. For example, you can read the values of all items matching a wildcard pattern using a single line of Python code!
-opc.read(opc.list('Square Waves.*'))
-Designed for dynamic languages
+
+    opc.read(opc.list('Square Waves.*'))
+
+### Designed for dynamic languages
 
 Most OPC toolkits today are designed for use with static system languages (such as C++ or C#), providing a close mapping to the underlying Win32 COM methods. OpenOPC discards this cumbersome model and instead attempts to take advantage of the dynamic language features provided by Python.
 
 OpenOPC is also one of the very few OPC-DA toolkits available for any dynamic language, and future support is planned for Ruby.
-EXAMPLE: Minimal working program
+
+
+### EXAMPLE: Minimal working program
 
     import OpenOPC
     opc = OpenOPC.client()
